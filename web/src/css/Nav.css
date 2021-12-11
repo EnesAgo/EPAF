@@ -1,0 +1,142 @@
+.header{
+  min-height: 60px;
+  border-bottom: .5px solid rgba(226, 226, 226, .5)
+}
+.header ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header ul .firstLi{
+  display: flex;
+}
+.header ul .firstLi h3{
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 60px;
+}
+
+/*seccond-li // navbar*/
+.header ul .secLi ul{
+  min-height: 60px;
+  max-width: 600px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.header ul .secLi ul li .links{
+  color:rgba(0, 0, 0, .4);
+  font-weight: 600;
+  font-size: 15px;
+}
+.header ul .secLi ul li .links:hover{
+  color: var(--orange-default-color);
+}
+.header ul .secLi ul li .links .forum{
+  background-color: var(--orange-default-color);
+  color: #fff;
+  width: 130px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 350ms;
+}
+.header ul .secLi ul li .links .forum:hover{
+  background-color: var(--orange-hover-color);
+}
+.header ul .secLi ul li .links .forum h4{
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+/*hamburger-menu*/
+.menubut{
+  position: relative;
+  transition: 350ms;
+  background-color: #ebebeb;
+  height: 45px !important;
+  width: 45px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menubut span{
+  margin: 2px 0;
+  height: 3px;
+  width: 25px;
+  background-color: rgba(0, 0, 0, .7);
+  border: 2px solid rgba(0, 0, 0, .7);
+  border-radius: 25%;
+}
+.menubut:hover{
+  background-color: #e3e6e9;
+  transform: scale(1.05);
+}
+
+
+
+@media only screen and (max-width: 1000px){
+  /*header*/
+  .navbar{
+      margin: 0;
+      padding: 0;
+  }
+
+  .header ul .firstLi h3{
+      margin-left: 15px;
+  }
+  .header ul .firstLi{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  }
+  .header ul .secLi{
+      background-color: #fff;
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      border-top: 1px black solid;
+      top: 90px;
+      left: 0;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      transition: 350ms;
+
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -10;
+  }
+  .header ul .secLi ul{
+      margin: 0;
+      padding: 0;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .menubut{
+      display: flex;
+      margin-right: 15px;
+  }
+  .acti{
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      z-index: 10 !important;
+  }
+}

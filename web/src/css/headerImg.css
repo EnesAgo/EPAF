@@ -1,0 +1,56 @@
+.headerImg{
+    grid-area: headerImg;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: center no-repeat url('https://www.etch.com/app/files/public/b907df10-56ad-468c-8924-358ba8538fa7/scripps_tower_ext_night_8-2018_1198x475.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+}
+
+/*container*/
+.container{
+    background-color: #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.container h4{
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.container .consultBut{
+    margin: 10px;
+    margin-top: 20px;
+    background-color: var(--orange-default-color);
+    color: #000;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+}
+.container .consultBut:hover{
+    background-color: var(--orange-hover-color);
+}
+.container .consultBut p{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
