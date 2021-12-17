@@ -20,7 +20,9 @@ function Nav() {
         <div className="header">
           <ul>
                 <li className="firstLi">
-                    <h3>LOGO</h3>
+                    {/* <h3>LOGO</h3> */}
+                    <img src="images/EPAF_LOGO.png" alt="LOGO" className='logo' />
+
                     <span id="openNav" className="menubut" onClick={changeActi}>
                         <span></span>
                         <span></span>

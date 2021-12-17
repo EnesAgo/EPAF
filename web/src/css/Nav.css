@@ -17,6 +17,10 @@
   line-height: 60px;
 }
 
+.header ul .firstLi .logo{
+  height: 60px;
+}
+
 /*seccond-li // navbar*/
 .header ul .secLi ul{
   min-height: 60px;
@@ -28,9 +32,10 @@
   justify-content: space-between;
 }
 .header ul .secLi ul li .links{
-  color:rgba(0, 0, 0, .4);
+  color:rgba(0, 0, 0, .5);
   font-weight: 600;
   font-size: 15px;
+  transition: 300ms;
 }
 .header ul .secLi ul li .links:hover{
   color: var(--orange-default-color);

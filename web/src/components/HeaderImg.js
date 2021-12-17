@@ -5,7 +5,7 @@ import '../css/headerImg.css'
 function HeaderImg() {
       return (
           <div className="headerImg">
-            <div class="container container1" id="container1">
+            <div className="container container1" id="container1">
             <h4>Welcome to EPAF</h4>
 
             <p>

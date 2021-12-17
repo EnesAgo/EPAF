@@ -4,6 +4,7 @@ import './css/App.css'
 import Nav from './nav-footer/Nav';
 import HeaderImg from './components/HeaderImg';
 import Home from './pages/Home';
+import Footer from './nav-footer/Footer';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
 
 
