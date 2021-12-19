@@ -2,9 +2,9 @@ import React from 'react';
 import '../css/Components.css';
 import { Link } from 'react-router-dom';
 
-function HomePageSliderBox({imgUrl, imgAlt, title, paragraph, link}) {
+function HomePageSliderBox({style, imgUrl, imgAlt, title, paragraph, link}) {
       return (
-            <div className="home-page-slider-box">
+            <div className="home-page-slider-box" style={style}>
                 <img src={imgUrl} alt={imgAlt} />
                     <div>
                         <h3>{title}</h3> <br />
