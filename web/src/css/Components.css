@@ -1,0 +1,149 @@
+/* HOME PAGE BOX */
+.home-page-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    min-height: 150px;
+    box-shadow: 3px 3px 3px #e3e6e9, -1px 0 1px rgba(0, 0, 0, .1);
+}
+.home-page-box img{
+    height: 50px;
+}
+.home-page-box button{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    width: 47.1px;
+    line-height: 13.3px;
+    font-size: 13.3px;
+    background-color: #eeeeee;
+    border: 0.5px solid #8f8f8f;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 100ms;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+}
+.home-page-box button:hover{
+    background-color: #e7e7e7;
+    border: 2px solid #6d6d6d;
+}
+
+
+
+/* HEADER IMG */
+.headerImg{
+    grid-area: headerImg;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: center no-repeat url('https://www.etch.com/app/files/public/b907df10-56ad-468c-8924-358ba8538fa7/scripps_tower_ext_night_8-2018_1198x475.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+}
+
+/*container*/
+.container{
+    background-color: #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.container h4{
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.container .consultBut{
+    margin: 10px;
+    margin-top: 20px;
+    background-color: var(--orange-default-color);
+    color: #000;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 350ms;
+}
+.container .consultBut:hover{
+    background-color: var(--orange-hover-color);
+}
+.container .consultBut p{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* SPECIAL BUTTON */
+.specialButton{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    border: 0.5px solid #8f8f8f;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 100ms;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin: 0 15px;
+}
+.specialButton:hover{
+    background-color: #e7e7e7;
+    border: 2px solid #6d6d6d;
+}
+.specialButton h3{
+    height: 100%;
+    width: 100%;
+    line-height: 280%;
+}
+
+/* HOME SLIDER */
+.homeslider{
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.homeslider .sliderMain{
+    min-width: 900px;
+}
+.home-page-slider-box{
+    background-color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    min-height: 150px;
+    box-shadow: 3px 3px 3px #e3e6e9, -1px 0 1px rgba(0, 0, 0, .1);
+    margin: 0 30px;
+}
+.home-page-slider-box img{
+    height: 50px;
+}

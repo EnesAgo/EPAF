@@ -5,6 +5,7 @@ import Nav from './nav-footer/Nav';
 import HeaderImg from './components/HeaderImg';
 import Home from './pages/Home';
 import Footer from './nav-footer/Footer';
+import PageNotFound from './pages/PageNotFound';
 
 
 
@@ -16,7 +17,12 @@ function App() {
         <Nav />
         <HeaderImg />
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* Home */}
+          <Route path="/" element={<Home />} exact />
+
+          {/* page 404 */}
+          <Route path="*" element={<PageNotFound />} />
+
         </Routes>
         <Footer />
       </Router>

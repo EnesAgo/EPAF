@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/headerImg.css'
+import '../css/Components.css'
 
 
 function HeaderImg() {
