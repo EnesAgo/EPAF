@@ -67,10 +67,23 @@
 
 @media screen and (max-width: 1000px){
     .home{
-        min-height: 1200px;
+        min-height: 1320px;
     }
     .home .home-li .firstDiv{
         flex-direction: column;
         height: 400px;
+    }
+    .home .home-li .midDiv{
+        height: 420px;
+    }
+    .home .home-li .midDiv ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .home .home-li .midDiv ul li{
+        margin: 20px 0;
+    }
+    .home .home-li .info{
+        text-align: center;
     }
 }
