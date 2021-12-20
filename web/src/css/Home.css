@@ -64,3 +64,13 @@
 .home .home-li .info .read-more:hover{
     color: rgba(3, 3, 197, 1);
 }
+
+@media screen and (max-width: 1000px){
+    .home{
+        min-height: 1200px;
+    }
+    .home .home-li .firstDiv{
+        flex-direction: column;
+        height: 400px;
+    }
+}

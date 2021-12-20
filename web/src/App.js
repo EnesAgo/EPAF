@@ -20,6 +20,9 @@ function App() {
           {/* Home */}
           <Route path="/" element={<Home />} exact />
 
+          {/* Report Fire And Pollution */}
+          <Route path="/" element={<Home />} exact />
+
           {/* page 404 */}
           <Route path="*" element={<PageNotFound />} />
 

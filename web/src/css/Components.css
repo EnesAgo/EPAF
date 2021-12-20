@@ -140,7 +140,17 @@
     min-height: 150px;
     box-shadow: 3px 3px 3px #e3e6e9, -1px 0 1px rgba(0, 0, 0, .1);
     margin: 0 30px;
+    transition: 500ms linear;
 }
 .home-page-slider-box img{
     height: 50px;
+}
+
+.SliderAnimationOpen{
+    opacity: 1;
+    transition: 1000ms linear;
+}
+.SliderAnimationClose{
+    opacity: 0;
+    transition: 500ms linear;
 }
