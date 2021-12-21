@@ -1,0 +1,34 @@
+{
+  "name": "epafapi",
+  "version": "1.0.0",
+  "description": "api for epaf project from enes ago and stefan dishliovski",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnesAgo/EPAF.git"
+  },
+  "keywords": [
+    "epaf",
+    "api",
+    "backend",
+    "stefan",
+    "enes",
+    "project",
+    "school"
+  ],
+  "author": "Enes Ago Stefan Dishliovski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EnesAgo/EPAF/issues"
+  },
+  "homepage": "https://github.com/EnesAgo/EPAF#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}

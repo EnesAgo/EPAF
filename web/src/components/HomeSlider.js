@@ -106,10 +106,46 @@ function HomeSlider() {
     
   }
 
+  function goLeft() {
+    // useTimeout(() => setAnimation('SliderAnimationClose'), 1000);
+
+    // setTimeout(() => {
+      setAnimation('SliderAnimationClose')
+    // }, 0);
+
+    setTimeout(() => {
+      if(array[0] > 0){
+        update(0, array[0]-1);
+      }
+      else{
+        update(0, data.length-1);
+      }
+  
+      if(array[1] > 0){
+        update(1, array[1]-1);
+      }
+      else{
+        update(1, data.length-1);
+      }
+  
+      if(array[2] > 0){
+        update(2, array[2]-1);
+      }
+      else{
+        update(2, data.length-1);
+      }
+    }, 500);
+
+    setTimeout(() => {
+      setAnimation('SliderAnimationOpen')
+    }, 1000);
+    
+  }
+
     return (
         <div className='homeslider d-flex'>
           
-          <button className='specialButton'>
+          <button onClick={goLeft} className='specialButton'>
             <h3>←</h3>
           </button>
 

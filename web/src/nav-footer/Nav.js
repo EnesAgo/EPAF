@@ -41,7 +41,7 @@ function Nav() {
                             <Link className="links" to="/" >Events</Link>
                         </li>
                         <li>
-                            <Link className="links" to="/" >Report Pollution/Fire</Link>
+                            <Link className="links" to="/report" >Report Pollution/Fire</Link>
                         </li>
                         <li>
                             <Link className="links" to="/" >Water Purification</Link>

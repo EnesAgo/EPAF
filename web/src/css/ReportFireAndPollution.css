@@ -1,0 +1,29 @@
+.reportFireAndPollution{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+.reportFireAndPollution .firstDiv{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  */
+    margin: 20px 0;
+}
+.reportFireAndPollution .firstDiv h3{
+    text-align: center;
+    margin: 20px 0;
+}
+.reportFireAndPollution .firstDiv .firstDivDivision{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reportFireAndPollution .secDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-color: #F4F9F5;
+}

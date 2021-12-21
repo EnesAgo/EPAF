@@ -154,3 +154,16 @@
     opacity: 0;
     transition: 500ms linear;
 }
+
+@media screen and (max-width: 1000px) {
+.specialButton{
+    margin: 0;
+}
+.home-page-slider-box{
+    margin: 0;
+    flex-direction: column;
+}
+.home-page-box{
+    flex-direction: column;
+}
+}

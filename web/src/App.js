@@ -6,6 +6,7 @@ import HeaderImg from './components/HeaderImg';
 import Home from './pages/Home';
 import Footer from './nav-footer/Footer';
 import PageNotFound from './pages/PageNotFound';
+import ReportFireAndPollution from './pages/ReportFireAndPollution';
 
 
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
 
           {/* Report Fire And Pollution */}
-          <Route path="/" element={<Home />} exact />
+          <Route path="/report" element={<ReportFireAndPollution />} exact />
 
           {/* page 404 */}
           <Route path="*" element={<PageNotFound />} />
