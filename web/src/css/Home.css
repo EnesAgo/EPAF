@@ -86,4 +86,7 @@
     .home .home-li .info{
         text-align: center;
     }
+    .home .home-li .info{
+        max-width: 500px;
+    }
 }
