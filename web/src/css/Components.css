@@ -162,8 +162,11 @@
 .home-page-slider-box{
     margin: 0;
     flex-direction: column;
+    width: 200px !important;
 }
 .home-page-box{
     flex-direction: column;
+    width: 200px !important;
 }
+
 }
