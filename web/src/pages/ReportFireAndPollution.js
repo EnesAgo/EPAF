@@ -1,15 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import '../css/ReportFireAndPollution.css'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import ReportForm, { getFileData, getSelectData, getDescriptionData } from '../components/ReportForm';
 
-const containerStyle = {
-    width: '800px',
-    height: '400px'
-  };
-  
-//   var latlng = new google.maps.LatLng(41.5, 22);
 
 function ReportFireAndPollution() {
+
+   const [fileData, setFileData] = useState()
+   const [selectData, setSelectData] = useState()
+   const [descriptionData, setDescriptionData] = useState()
+
+   function getFileData(e) {
+      const files = Array.from(e.target.files)
+      console.log("files:", files)
+      const file = files[0];
+      console.log(file)
+      setFileData(file)
+    } 
+
+    function getSelectData(e) {
+      console.log(e.target)
+      const {name, value} = e.target;
+
+      setSelectData({name, value})
+    }
+
+    function getDescriptionData(e) {
+      console.log(e.target.value)
+
+      setDescriptionData(e.target.value)
+
+    }
+
+    /* GOOGLE MAP */
 
     const [center, setCenter] = useState(
         {
@@ -17,7 +40,7 @@ function ReportFireAndPollution() {
             lng: 22
         }
       )
-
+  
     const [markerCoords, setMarkerCoords] = useState({lat: 0, lon: 0})
 
       useEffect(() => {
@@ -26,7 +49,7 @@ function ReportFireAndPollution() {
                 lat: 41.5,
                 lng: 22
               })
-          }, 100);
+          }, 500);
 
         //   console.log(markerCoords)
 
@@ -53,6 +76,12 @@ function ReportFireAndPollution() {
           disableDefaultUI: true,
           zoomControl: true
       }
+
+      const containerStyle = {
+        width: '800px',
+        height: '400px',
+        margin: "20px 0",
+      };
 
       return (
           <div className='reportFireAndPollution'>
@@ -93,6 +122,11 @@ function ReportFireAndPollution() {
                 <></>
                 </GoogleMap>
                 ) : <></>}
+
+                <div className="reportFormContainer">
+                  <ReportForm getFileDataFunction={getFileData} getSelectDataFunction={getSelectData} getDescriptionDataFunction={getDescriptionData} />
+                  {/* <button onClick={() => console.log(descriptionData)}>asdasdsad</button> */}
+                </div>
               </div>
 
               

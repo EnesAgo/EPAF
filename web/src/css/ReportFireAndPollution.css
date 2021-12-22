@@ -22,8 +22,95 @@
 
 .reportFireAndPollution .secDiv{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 500px;
     background-color: #F4F9F5;
+}
+
+.reportFireAndPollution .secDiv .reportFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    margin: 20px 0;
+}
+
+.reportFireAndPollution .secDiv .reportForm{
+    display: flex;
+    min-height: 200px;
+
+}
+.reportFireAndPollution .secDiv .reportForm .reportFormDivs{
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.reportFireAndPollution .secDiv .reportForm .reportFormDivs input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 110px;
+    transition: 200ms;
+    
+}
+.custom-file-upload:hover {
+    background-color: rgb(241, 241, 241);
+    border: 1px solid #000;
+}
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 96px;
+    height: 26px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    line-height: 20px;
+    font-size: 15px;
+    padding:0 1px;
+    background: #fff url("https://super-calculator.enesago.repl.co/photos/downarrowicon.png") no-repeat;
+    background-position: 110% 40%;
+    background-size: 30px;
+    cursor: pointer;
+    transition: 200ms;
+}
+select:hover{
+    background-color: rgb(241, 241, 241);
+    border: 2px solid #000;
+}
+textarea{
+    height: 20px;
+    line-height: 20px;
+}
+.specialButtonReport{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    background-color: #fff;
+    border: 0.5px solid #8f8f8f;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 200ms;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin: 20px 0;
+}
+.specialButtonReport:hover{
+    background-color: #e7e7e7;
+    border: 1px solid #6d6d6d;
 }
