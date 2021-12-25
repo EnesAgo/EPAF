@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/ReportFireAndPollution.css'
 
-function ReportForm({getFileDataFunction, getSelectDataFunction, getDescriptionDataFunction}) {
+function ReportForm({getFileDataFunction, getDescriptionDataFunction, buttonOnClick}) {
 
 
       return (
@@ -9,28 +9,20 @@ function ReportForm({getFileDataFunction, getSelectDataFunction, getDescriptionD
               <div className='reportForm'>
                     <div className='reportFormDivs'>
                         <h3>Upload photos: </h3> <br />
-                        <h3>Type of Problem: </h3> <br />
                         <h3>Description:</h3>
                     </div>
                     <div className='reportFormDivs'>
                         <label for="file-upload" className="custom-file-upload">
                           custom upload
                         </label>
-                        <input type="file" id="file-upload" onChange={getFileDataFunction} accept="image/png, image/jpeg" /> <br />
+                        <input type="file" id="file-upload" onChange={getFileDataFunction} required accept="image/png, image/jpeg" /> <br />
 
-                        <select onChange={getSelectDataFunction} name="select" id="select">
-                            <option selected disabled>Choose one</option>
-                            <option value="fire">Fire</option>
-                            <option value="pollution">Pollution</option>
-                        </select> <br />
-
-
-                        <textarea name="description" onChange={getDescriptionDataFunction} cols="30" rows="1"></textarea>
+                        <textarea name="description" onChange={getDescriptionDataFunction} required cols="30" rows="1"></textarea>
 
 
                     </div>
                   </div>
-                  <button className='specialButtonReport'>
+                  <button onClick={buttonOnClick} className='specialButtonReport'>
                     SUBMIT
                   </button>
           </div>
