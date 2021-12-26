@@ -38,10 +38,10 @@ function ReportFireAndPollution() {
    const jsondata = {
      lat: markerCoords.lat,
      lon: markerCoords.lon,
-     image: fileData,
+    //  image: fileData,
      description: descriptionData,
      encodedFile: encodedFile,
-     fullEncodedFile: `data:image/jpeg;base64,${encodedFile}`
+    //  fullEncodedFile: `data:image/jpeg;base64,${encodedFile}`
    }
 
    const opstions = {

@@ -2,6 +2,7 @@
   "name": "epafapi",
   "version": "1.0.0",
   "description": "api for epaf project from enes ago and stefan dishliovski",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +31,7 @@
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "firebase": "^9.4.1",
     "googleapis": "^39.2.0",
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15"

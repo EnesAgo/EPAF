@@ -1,10 +1,34 @@
-const express = require('express');
-const fs = require('fs');
+import express from 'express';
+import fs from 'fs';
+import cors from 'cors';
+
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore"; 
+
 const app = express();
-const cors = require('cors');
-// const nodemailer = require("nodemailer");
-// const bodyParse = require("body-parser")
-// const smtpTransport = require("nodemailer-smtp-transport")
+
+/**
+   const querySnapshot = await getDocs(collection(db, "events"));
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data()}`);
+  });
+ */
+
+const firebaseApp = initializeApp({
+  apiKey: "AIzaSyA4x5xmMheuGO9zjEipeN7shrtVikUeAtA",
+  authDomain: "epaf-database.firebaseapp.com",
+  projectId: "epaf-database",
+  storageBucket: "epaf-database.appspot.com",
+  messagingSenderId: "992102691170",
+  appId: "1:992102691170:web:075a5fa03805edf223fc3b"
+});
+
+// Initialize Firebase
+const db = getFirestore();
+
+
+let objs = [];
 
 
 app.use(express.json({limit: '100mb'}));
@@ -16,80 +40,30 @@ app.use(cors({
 
   let title = "";
 
-  // transporter.verify().then(console.log).catch(console.error);
+app.post("/post", async (req, res) => {
+  title = req.body.title;
 
+  let isHappend = true;
 
+  try {
+    const docRef = await addDoc(collection(db, "events"), {
+      lat: req.body.lat,
+      lon: req.body.lon,
+      description: req.body.description,
+      encodedFile: `data:image/png;base64,${req.body.encodedFile}`
+    });
+    console.log("Document written with ID: ", docRef.id);
+    isHappend = true;
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    isHappend = false;
+  }
 
-app.get("/", (req, res) => {
-  let dataa = {
-    bool:true,
-    // name: "somethink"
-  } 
   // console.log(req.body)
 
-  const file = fs.readFileSync("data.json");
-
-  const products = JSON.parse(file)
-
-  console.log(products)
-
-  res.json(products);
-  
-  });
+  res.json(isHappend)
+});
 
 
-app.post("/api/report", (req, res) => {
-  title = req.body.title;
-
-  // emailData.subject = title;z
-
-  let what = {
-    bool:true
-  } 
-  console.log(req.body)
-
-
-  res.json(JSON.stringify(what));
-
-})
-app.post("/post", (req, res) => {
-  title = req.body.title;
-
-  let what = {
-    bool:true
-  } 
-  console.log(req.body)
-  // console.log(req.file)
-
-
-
-  res.json(JSON.stringify(what));
-
-})
-app.post("/", (req, res) => {
-  title = req.body.title;
-
-  // emailData.subject = title;z
-
-  let what = {
-    bool:true
-  } 
-  console.log(req.body)
-
-
-  res.json(JSON.stringify(what));
-
-})
-app.get("/api/report", (req, res) => {
-
-  // res.send(title)
-  const file = fs.readFileSync("data.json");
-
-  const products = JSON.parse(file)
-
-  console.log(products)
-
-  res.json(products);
-})
 
 app.listen(3001);
