@@ -54,7 +54,7 @@ function ReportFireAndPollution() {
 };
 
 async function PosttoApi() {
-  const response = await fetch('https://EPAFbackend.agoenes.repl.co/post', opstions);
+  const response = await fetch('http://localhost:3001/post', opstions);
   const resData = await response.json();
 
   console.log(JSON.stringify(jsondata))
@@ -94,7 +94,15 @@ async function PosttoApi() {
             lng: 22
         }
       )
-  
+    
+      useEffect(async () => {
+        const response = await fetch("https://epafbackend.agoenes.repl.co/post");
+        const data = await response.json()
+
+        console.log(data[0])
+
+        setEncodedFile(data[0].encodedImg)
+      },[])
 
       useEffect(() => {
           setTimeout(() => {
