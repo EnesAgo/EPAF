@@ -114,3 +114,9 @@ textarea{
     background-color: #e7e7e7;
     border: 1px solid #6d6d6d;
 }
+
+@media screen and (max-width: 1000px) {
+    .reportFireAndPollution .firstDiv .firstDivDivision{
+        flex-direction: column;
+    }
+}
