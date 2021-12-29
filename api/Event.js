@@ -9,6 +9,7 @@ console.log(e)
 })
 
 const eventSchema = new mongoose.Schema({
+  idNo: Number,
   class: String,
   lat: Number,
   lon: Number,

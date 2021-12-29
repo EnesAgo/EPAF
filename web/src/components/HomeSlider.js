@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../css/Components.css'
 import useArray from '../hooks/useArray';
-import useTimeout from '../hooks/useTimeout';
 import useWindowSize from '../hooks/useWindowSize';
 import HomePageSliderBox from './HomePageSliderBox';
 

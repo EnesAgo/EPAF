@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/ReportFireAndPollution.css'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-import ReportForm, { getFileData, getSelectData, getDescriptionData } from '../components/ReportForm';
+import ReportForm from '../components/ReportForm';
+import useWindowSizeOnce from './../hooks/useWindowSizeOnce'
 
 
 function base64(file, callback){
   //https://stackoverflow.com/questions/6150289/how-can-i-convert-an-image-into-base64-string-using-javascript
   var coolFile = {};
+  
   function readerOnload(e){
     var base64 = btoa(e.target.result);
     coolFile.base64 = base64;
@@ -24,17 +26,20 @@ function base64(file, callback){
 }
 
 
+
 function ReportFireAndPollution() {
 
-   const [fileData, setFileData] = useState()
-   const [selectData, setSelectData] = useState()
-   const [descriptionData, setDescriptionData] = useState()
-   const [markerCoords, setMarkerCoords] = useState({lat: 0, lon: 0})
-   const [encodedFile, setEncodedFile] = useState("")
+   const [fileData, setFileData] = useState();
+   const [descriptionData, setDescriptionData] = useState();
+   const [markerCoords, setMarkerCoords] = useState({lat: 0, lon: 0});
+   const [encodedFile, setEncodedFile] = useState("");
 
-   const imageRef = useRef()
+   const [mapWidth, setMapWidth] = useState("800px");
+   const [mapHeight, setMapHeight] = useState("400px");
+   const {width, height} = useWindowSizeOnce();
 
-
+    console.log(width)
+   
    const jsondata = {
      lat: markerCoords.lat,
      lon: markerCoords.lon,
@@ -76,7 +81,7 @@ async function PosttoApi() {
       })
 
 
-      imageRef.current.src = `data:image/jpeg;base64,${encodedFile}`
+      // imageRef.current.src = `data:image/jpeg;base64,${encodedFile}`
     } 
 
     function getDescriptionData(e) {
@@ -96,12 +101,10 @@ async function PosttoApi() {
       )
     
       useEffect(async () => {
-        const response = await fetch("https://epafbackend.agoenes.repl.co/post");
+        const response = await fetch("https://epafbackend.agoenes.repl.co/post/0");
         const data = await response.json()
 
-        console.log(data[0])
-
-        setEncodedFile(data[0].encodedImg)
+        console.log(data)
       },[])
 
       useEffect(() => {
@@ -138,9 +141,30 @@ async function PosttoApi() {
           zoomControl: true
       }
 
+      useEffect(() => {
+      if(width < 500){
+        setMapWidth('80%');
+        setMapHeight(`${width - ((width*80/100)/2)}px`)
+      console.log(width - ((width*80/100)/2))
+
+      }
+      else if(width < 600){
+        setMapWidth('400px');
+        setMapHeight(`${(width*80/100)/2}px`)
+      console.log(width - ((width*80/100)/2))
+
+      }
+      else if(width < 800){
+        setMapWidth('600px');
+        setMapHeight('300px')
+      }
+      }, [])
+
+
+      
       const containerStyle = {
-        width: '800px',
-        height: '400px',
+        width: mapWidth,
+        height: mapHeight,
         margin: "20px 0",
       };
 
@@ -186,10 +210,8 @@ async function PosttoApi() {
 
                 <div className="reportFormContainer">
                   <ReportForm getFileDataFunction={getFileData} getDescriptionDataFunction={getDescriptionData} buttonOnClick={PosttoApi} />
-                  {/* <button onClick={() => console.log(descriptionData)}>asdasdsad</button> */}
                 </div>
-                {/* <button onClick={PosttoApi}>asd</button> */}
-                <img ref={imageRef} src={`data:image/jpeg;base64,${encodedFile}`} alt="Red dot" />
+                {/* <img ref={imageRef} src={`data:image/jpeg;base64,${encodedFile}`} alt="Red dot" /> */}
               </div>
 
               

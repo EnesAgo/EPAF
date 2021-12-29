@@ -12,7 +12,7 @@ function ReportForm({getFileDataFunction, getDescriptionDataFunction, buttonOnCl
                         <h3>Description:</h3>
                     </div>
                     <div className='reportFormDivs'>
-                        <label for="file-upload" className="custom-file-upload">
+                        <label htmlFor="file-upload" className="custom-file-upload">
                           custom upload
                         </label>
                         <input type="file" id="file-upload" onChange={getFileDataFunction} required accept="image/png, image/jpeg" /> <br />
