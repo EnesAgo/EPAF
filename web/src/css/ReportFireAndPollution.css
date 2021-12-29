@@ -120,3 +120,17 @@ textarea{
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .reportFireAndPollution .secDiv .reportForm .reportFormDivs{
+        margin: 0 0;
+    }
+    .reportFireAndPollution .secDiv .reportFormContainer, .reportFireAndPollution .secDiv .reportForm{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .firstReportDiv{
+        display: none !important;
+    }
+}

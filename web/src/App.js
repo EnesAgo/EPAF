@@ -8,7 +8,7 @@ import Footer from './nav-footer/Footer';
 import PageNotFound from './pages/PageNotFound';
 import ReportFireAndPollution from './pages/ReportFireAndPollution';
 
-
+console.log("made by: Enes Ago and Stefan Dishliovski")
 
 function App() {
   return (

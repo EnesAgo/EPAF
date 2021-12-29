@@ -7,7 +7,7 @@ function ReportForm({getFileDataFunction, getDescriptionDataFunction, buttonOnCl
       return (
           <div className='reportFormContainer'>
               <div className='reportForm'>
-                    <div className='reportFormDivs'>
+                    <div className='reportFormDivs firstReportDiv'>
                         <h3>Upload photos: </h3> <br />
                         <h3>Description:</h3>
                     </div>
@@ -17,7 +17,7 @@ function ReportForm({getFileDataFunction, getDescriptionDataFunction, buttonOnCl
                         </label>
                         <input type="file" id="file-upload" onChange={getFileDataFunction} required accept="image/png, image/jpeg" /> <br />
 
-                        <textarea name="description" onChange={getDescriptionDataFunction} required cols="30" rows="1"></textarea>
+                        <textarea placeholder='descrioption' name="description" onChange={getDescriptionDataFunction} required cols="30" rows="1"></textarea>
 
 
                     </div>

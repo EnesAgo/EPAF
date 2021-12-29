@@ -143,20 +143,17 @@ async function PosttoApi() {
 
       useEffect(() => {
       if(width < 500){
-        setMapWidth('80%');
-        setMapHeight(`${width - ((width*80/100)/2)}px`)
-      console.log(width - ((width*80/100)/2))
-
+        setMapWidth('70%');
+        setMapHeight(`${width / 2}px`)
       }
       else if(width < 600){
         setMapWidth('400px');
-        setMapHeight(`${(width*80/100)/2}px`)
-      console.log(width - ((width*80/100)/2))
+        setMapHeight(`300px`)
 
       }
       else if(width < 800){
         setMapWidth('600px');
-        setMapHeight('300px')
+        setMapHeight('350px')
       }
       }, [])
 
@@ -175,10 +172,10 @@ async function PosttoApi() {
                   <h3>Report Fire and Pollution</h3>
                   <div className='firstDivDivision'>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                        Saepe eum corporis ipsa dolores iusto, <br />
-                        ratione excepturi voluptas maiores sunt quidem fuga <br />
-                        modi dolorem id, aliquid harum? Quaerat doloribus iure reprehenderit.
+                        Lorem ipsum dolor elit. <br />
+                        Saepe eum corporis ipsa iusto, <br />
+                        ratione excepturi voluptas fuga <br />
+                        modi dolorem id, aliquid harum?
                     </p>
                     <img src="/images/HomePageImg.jpeg" alt="just and image" />
                   </div>
