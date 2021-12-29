@@ -59,7 +59,7 @@ function ReportFireAndPollution() {
 };
 
 async function PosttoApi() {
-  const response = await fetch('http://localhost:3001/post', opstions);
+  const response = await fetch('https://EPAFbackend.agoenes.repl.co/post', opstions);
   const resData = await response.json();
 
   console.log(JSON.stringify(jsondata))
