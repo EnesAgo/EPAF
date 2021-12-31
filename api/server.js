@@ -19,11 +19,7 @@ app.post("/post", async (req, res) => {
 
   let isHappend = true;
 
-  // const count = await Event.find().sort({ _id: -1}).limit(1);
-
-  // console.log(await Event.length)
-
-  const allEvents = await Event.count({class: "a"});
+  const allEvents = await Event.count({});
 
   console.log(allEvents)
 
@@ -37,8 +33,6 @@ app.post("/post", async (req, res) => {
     encodedImg: req.body.encodedFile
   })
 
-  // console.log(typeof(req.body.lat))
-
   await event.save()
 
   console.log("hi")
@@ -47,7 +41,7 @@ app.post("/post", async (req, res) => {
 });
 
 app.get("/post", async (req, res) => {
-  const allEvents = await Event.find({class: "a"});
+  const allEvents = await Event.find({});
   res.json(allEvents)
 })
 

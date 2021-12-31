@@ -101,7 +101,7 @@ async function PosttoApi() {
       )
     
       useEffect(async () => {
-        const response = await fetch("https://epafbackend.agoenes.repl.co/post/0");
+        const response = await fetch("https://epafbackend.agoenes.repl.co/post/");
         const data = await response.json()
 
         console.log(data)
@@ -121,7 +121,7 @@ async function PosttoApi() {
 
       const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: 'AIzaSyA3mXnn3_ZwQEzJQphiMpnW7YZZZk6Yal4   '
+        googleMapsApiKey: 'AIzaSyA3mXnn3_ZwQEzJQphiMpnW7YZZZk6Yal4'
       })
 
       const [map, setMap] = React.useState(null)

@@ -7,13 +7,13 @@ import HomePageSliderBox from './HomePageSliderBox';
 
 function HomeSlider() {
 
-  const {width, height} = useWindowSize();
+  const {width} = useWindowSize();
 
   const [animation, setAnimation] = useState('SliderAnimationOpen')
 
   const [isWindowSmall, setIsWindowSmall] = useState('flex');
 
-  const {array, set, push, remove, filter, update, clear} = useArray([0,1,2])
+  const {array, update} = useArray([0,1,2])
 
   // useTimeout(() => setAnimation('SliderAnimationClose'), 1000);
   // useTimeout(() => setAnimation('SliderAnimationOpen'), 2000);
@@ -24,7 +24,7 @@ function HomeSlider() {
     } else{
       setIsWindowSmall("flex")
     }
-}, []);
+  }, []);
 
   const data = [
     {
