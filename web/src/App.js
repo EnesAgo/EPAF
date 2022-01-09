@@ -8,7 +8,9 @@ import Footer from './nav-footer/Footer';
 import PageNotFound from './pages/PageNotFound';
 import Events from './pages/Events';
 import ReportFireAndPollution from './pages/ReportFireAndPollution';
+import TripSuggestions from './pages/TripSuggestions';
 import {EventProvider} from './contexes/Eventcontext'
+import { TripSuggestionProvider } from './contexes/TripSuggestionscontext';
 
 
 console.log("made by: Enes Ago and Stefan Dishliovski")
@@ -18,6 +20,7 @@ function App() {
     <div className="App">
 
       <EventProvider>
+        <TripSuggestionProvider>
 
       <Router>
         <Nav />
@@ -32,6 +35,10 @@ function App() {
           {/* Events */}
           <Route path="/events" element={<Events />} exact />
 
+
+          {/* Forum */}
+          <Route path="/TripSuggestion" element={<TripSuggestions />} exact />
+
           {/* page 404 */}
           <Route path="*" element={<PageNotFound />} />
 
@@ -39,6 +46,8 @@ function App() {
         <Footer />
       </Router>
 
+
+      </TripSuggestionProvider>
       </EventProvider>
 
     </div>

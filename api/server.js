@@ -1,7 +1,11 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
-const Event = require("./Event")
+const MongooseFile = require("./Mongoose")
+
+const Event = MongooseFile.Event;
+const Tripsuggestion = MongooseFile.Tripsuggestion;
+
 
 const app = express();
 
@@ -14,9 +18,12 @@ app.use(cors({
 
   let title = "";
 
-app.post("/post", async (req, res) => {
-  title = req.body.title;
+  // async function deletemany() {
+  //   await Event.deleteMany({})
+  // }
+  // deletemany()
 
+app.post("/post", async (req, res) => {
   let isHappend = true;
 
   const allEvents = await Event.count({});
@@ -52,5 +59,44 @@ app.get("/post/:id", async (req, res) => {
 
   res.json(specificEvent[0]);
 })
+
+
+
+
+app.post("/Tripsuggestion", async (req, res) => {
+
+  const allTripsuggestion = await Tripsuggestion.count({});
+
+  console.log(allTripsuggestion)
+
+
+  const tripsuggestion = await Tripsuggestion.create({
+    idNo: allTripsuggestion || 0,
+    class: "a",
+    lat: parseFloat(req.body.lat),
+    lon: parseFloat(req.body.lon),
+    title: req.body.title,
+    description: req.body.description,
+    encodedImg: req.body.encodedFile,
+    sendFrom: req.body.sendFrom,
+    likes: 0,
+    place: req.body.place,
+    generalInfo: req.body.generalInfo
+  })
+
+  await tripsuggestion.save()
+
+  console.log("hi")
+
+  res.json(true)
+  
+})
+
+app.get("/Tripsuggestion", async (req, res) => {
+  const allTripsuggestion = await Tripsuggestion.find({});
+
+  res.json(allTripsuggestion)
+})
+
 
 app.listen(3001);

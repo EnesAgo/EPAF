@@ -41,15 +41,15 @@ function Nav() {
                             <Link className="links" to="/events" >Events</Link>
                         </li>
                         <li>
-                            <Link className="links" to="/report" >Report Pollution/Fire</Link>
+                            <Link className="links" to="/report" >Report Pollution</Link>
                         </li>
                         <li>
                             <Link className="links" to="/" >Water Purification</Link>
                         </li>
                         <li>
-                            <Link className="links" to="/">
+                            <Link className="links" to="/TripSuggestion">
                                 <div className="forum">
-                                    <h4>Forum</h4>
+                                    <h4>TripSuggestion</h4>
                                 </div>
                             </Link>
                         </li>
