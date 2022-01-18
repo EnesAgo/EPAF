@@ -9,7 +9,7 @@ function HeaderImg() {
             <h4>Welcome to EPAF</h4>
 
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur totam nobis vero. Corporis molestiae consectetur enim, quod dolor natus vel ipsum totam molestias, corrupti commodi minus, quasi hic quaerat at.
+            The Environmental Protection and Awareness of Forests
             </p>
 
             {/* <div class="consultBut">

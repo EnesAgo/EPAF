@@ -3,13 +3,17 @@
     display: flex;
     text-align: center;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
     width: 300px;
     min-height: 150px;
     box-shadow: 3px 3px 3px #e3e6e9, -1px 0 1px rgba(0, 0, 0, .1);
 }
+.home-page-box:hover{
+    background-color: rgba(0, 0, 0, 0.02);
+}
 .home-page-box img{
-    height: 50px;
+    height: 70px;
 }
 .home-page-box button{
     appearance: none;
@@ -42,7 +46,10 @@
     background-color: white;
     margin: 0 !important;
     padding: 0 !important;
-    background: center no-repeat url('https://www.etch.com/app/files/public/b907df10-56ad-468c-8924-358ba8538fa7/scripps_tower_ext_night_8-2018_1198x475.jpg');
+    /* background: center no-repeat url('https://www.etch.com/app/files/public/b907df10-56ad-468c-8924-358ba8538fa7/scripps_tower_ext_night_8-2018_1198x475.jpg'); */
+    /* background: center no-repeat url('https://sgpreston.com/img/uploadfile/banner-forest.jpg'); */
+    /* background: center no-repeat url('https://inhabitat.com/wp-content/blogs.dir/1/files/2016/08/Trees-Forests-Full-Width-1020x393.jpg'); */
+    background: center no-repeat url('https://www.skogsstyrelsen.se/globalassets/mediaflowpro/bilder-statistik/eng_frivavs_certif_2021_p1010198_002_kantzon_skog_fyllean.jpg2021-02-11?width=750');
     background-size: cover;
     width: 100%;
     min-height: 400px;
@@ -50,10 +57,11 @@
 
 /*container*/
 .container{
-    background-color: #fff;
+    /* background-color: #fff; */
+    color: #fff;
 
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -65,9 +73,17 @@
 }
 .container h4{
     font-family: 'Poppins', sans-serif;
-    color: #000;
-    font-size: 18px;
-    font-weight: 800;
+    color: #fff;
+    font-size: 46px;
+    font-weight: 900;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+}
+.container p{
+    font-size: 28px;
+    font-weight: 300;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
 }
 
 .container .consultBut{
@@ -136,14 +152,16 @@
     text-align: center;
     align-items: center;
     justify-content: space-around;
-    width: 300px;
-    min-height: 150px;
+    width: 460px;
+    min-height: 200px;
     box-shadow: 3px 3px 3px #e3e6e9, -1px 0 1px rgba(0, 0, 0, .1);
     margin: 0 30px;
     transition: 500ms linear;
 }
 .home-page-slider-box img{
-    height: 50px;
+    height: 90px;
+    margin-top: 5px;
+    margin: 5px;
 }
 
 .SliderAnimationOpen{
@@ -163,6 +181,7 @@
     margin: 0;
     flex-direction: column;
     width: 200px !important;
+    height: 300px;
 }
 .home-page-box{
     flex-direction: column;

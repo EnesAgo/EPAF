@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../css/ReportFireAndPollution.css'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-import ReportForm from '../components/ReportForm';
-import useWindowSizeOnce from './../hooks/useWindowSizeOnce'
+import useWindowSizeOnce from './../hooks/useWindowSizeOnce';
+import ReportFormTrip from '../components/ReportFormTrip';
 
 
 function base64(file, callback){
@@ -27,12 +27,14 @@ function base64(file, callback){
 
 
 
-function ReportFireAndPollution() {
+function SubmitToTripSuggestions() {
 
    const [fileData, setFileData] = useState();
    const [descriptionData, setDescriptionData] = useState();
+   const [generalInfoData, setGeneralInfoData] = useState();
+   const [titleData, setTitleData] = useState();
    const [placeData, setPlaceData] = useState();
-   const [dateData, setDateData] = useState();
+   const [sendFromData, setSendFromData] = useState();
    const [markerCoords, setMarkerCoords] = useState({lat: 0, lon: 0});
    const [encodedFile, setEncodedFile] = useState("");
 
@@ -45,9 +47,10 @@ function ReportFireAndPollution() {
    const jsondata = {
      lat: markerCoords.lat,
      lon: markerCoords.lon,
-     dateTime: dateData,
+     title: titleData,
+     sendFrom: sendFromData,
      place: placeData,
-    //  image: fileData,
+     generalInfo: generalInfoData,
      description: descriptionData,
      encodedFile: encodedFile,
     //  fullEncodedFile: `data:image/jpeg;base64,${encodedFile}`
@@ -63,7 +66,7 @@ function ReportFireAndPollution() {
 };
 
 async function PosttoApi() {
-  const response = await fetch('https://EPAFbackend.agoenes.repl.co/post', opstions);
+  const response = await fetch('https://EPAFbackend.agoenes.repl.co/Tripsuggestion', opstions);
   const resData = await response.json();
 
   console.log(JSON.stringify(jsondata))
@@ -95,33 +98,34 @@ async function PosttoApi() {
 
     }
 
-    function getPlaceFunction(e) {
-      console.log(e.target.value)
+    function getGeneralInfoData(e) {
+        console.log(e.target.value)
+  
+        setGeneralInfoData(e.target.value)
+  
+      }
 
-      setPlaceData(e.target.value)
+    function getTitleData(e) {
+        console.log(e.target.value)
+  
+        setTitleData(e.target.value)
+
     }
 
-    function getTimeFunction(e) {
-      console.log(e.target.value)
-      const text = e.target.value;
-      const myArray = text.split("T");
-      let leftPart = myArray[0].split("-");
-      let a,b,c;
-      a=leftPart[0];
-      b=leftPart[1];
-      c=leftPart[2];
+    function getSendFromData(e) {
+        console.log(e.target.value)
+  
+        setSendFromData(e.target.value)
 
-      leftPart=[c,b,a].join(".");
-
-
-      const rightPart = myArray[1]
-
-      const finalTxt = `${leftPart} - ${rightPart}`
-      console.log(finalTxt)
-      
-
-      setDateData(finalTxt);
     }
+
+    function getPlaceData(e) {
+        console.log(e.target.value)
+  
+        setPlaceData(e.target.value)
+
+    }
+
 
     /* GOOGLE MAP */
 
@@ -200,20 +204,6 @@ async function PosttoApi() {
       return (
           <div className='reportFireAndPollution'>
 
-              <div className="firstDiv">
-                  <h3>Report Pollution</h3>
-                  <div className='firstDivDivision'>
-                    <p>
-                      In the Pollution Report section, the user can enter some location on the map. <br />
-                      Also they can take photo of the pollution and write description of the problem. <br />
-                      It is also important so select a date and time of the CleanUp. When they are ready, <br />
-                      they can submit and the problem will become an event for other users to gather <br />
-                      and clean the area.
-                    </p>
-                    <img src="https://images-ext-1.discordapp.net/external/LzIwFDsWK535BZmekN-KK9Em52BoH923-deIjJ0sDBw/http/www.brsmeas.org/Portals/2/images/news/Mountains_plastic.jpg" style={{width: "275px"}} alt="just and image" />
-                  </div>
-              </div>
-
               <div className="secDiv">
                 {isLoaded ? (
                 <GoogleMap
@@ -239,7 +229,7 @@ async function PosttoApi() {
                 ) : <></>}
 
                 <div className="reportFormContainer">
-                  <ReportForm getPlaceFunction={getPlaceFunction} getTimeFunction={getTimeFunction} getFileDataFunction={getFileData} getDescriptionDataFunction={getDescriptionData} buttonOnClick={PosttoApi} />
+                  <ReportFormTrip getPlaceDataFunction={getPlaceData} getSendFromData={getSendFromData} getTitleData={getTitleData} getFileDataFunction={getFileData} getTitleDataFunction={getTitleData} generalInfoDataFunction={getGeneralInfoData} descriptionDataFunction={getDescriptionData} buttonOnClick={PosttoApi} />
                 </div>
                 {/* <img ref={imageRef} src={`data:image/jpeg;base64,${encodedFile}`} alt="Red dot" /> */}
               </div>
@@ -250,4 +240,4 @@ async function PosttoApi() {
   }
 
 
-export default ReportFireAndPollution;
+export default SubmitToTripSuggestions;

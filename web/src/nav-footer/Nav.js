@@ -17,8 +17,8 @@ function Nav() {
   
     return(
 
-        <div className="header">
-          <ul>
+        <header className="header">
+          <nav>
                 <li className="firstLi">
                     {/* <h3>LOGO</h3> */}
                     <img src="images/EPAF_LOGO.png" alt="LOGO" className='logo' />
@@ -35,10 +35,10 @@ function Nav() {
                             <Link className="links" to="/">Home</Link>
                         </li>
                         <li>
-                            <Link className="links" to="/" >About</Link>
+                            <Link className="links" to="/about" >About Us</Link>
                         </li>
                         <li>
-                            <Link className="links" to="/events" >Events</Link>
+                            <Link className="links" to="/CleanUps" >CleanUps</Link>
                         </li>
                         <li>
                             <Link className="links" to="/report" >Report Pollution</Link>
@@ -47,9 +47,12 @@ function Nav() {
                             <Link className="links" to="/" >Water Purification</Link>
                         </li>
                         <li>
+                            <Link className='links' to="submitToTripSuggestions" >new Trip suggestion</Link>
+                        </li>
+                        <li>
                             <Link className="links" to="/TripSuggestion">
                                 <div className="forum">
-                                    <h4>TripSuggestion</h4>
+                                    <h4>Trip Suggestion</h4>
                                 </div>
                             </Link>
                         </li>
@@ -57,8 +60,8 @@ function Nav() {
                     </ul>
                 </li>
 
-            </ul>
-          </div>
+            </nav>
+          </header>
     );
   }
 

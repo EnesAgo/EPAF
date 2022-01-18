@@ -1,17 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../css/Components.css'
 
 function HomePageBox({imgUrl, imgAlt, title, paragraph, button="bottun"}) {
+    const styles = {
+        color:"#000"
+    }
       return (
-            <div className="home-page-box">
+            <Link to="/about" style={styles} className="home-page-box">
                 <img src={imgUrl} alt={imgAlt} />
                     <div>
                         <h3>{title}</h3> <br />
-                        <p>{paragraph}</p>
-                        <br /><br />
-                        <button>{button}</button>
+                        {/* <p>{paragraph}</p> */}
+                        {/* <br /><br /> */}
+                        {/* <button>{button}</button> */}
                     </div>
-            </div>
+            </Link>
       )
   }
 

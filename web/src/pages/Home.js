@@ -14,13 +14,14 @@ function Home() {
                   <li className='home-li'>
                     <div className="firstDiv">
                         <p className='firstDiv-txt'>
-                            What is EPAF? <br />
-                            EPAF offers awarness <br />
-                            and protects the <br />
-                            enviroment from<br />
-                            polution and wild fires...
+                            EPAF stands for Environmental Protection and Awareness of Forests. <br /> 
+                            It is an environmentaly friendly application. The perpous of this <br />
+                            application is to save the mountains and forests from pollution <br />
+                            and provide people healthy environments.
+                            <br />
+                            <Link to="/about">Read more</Link>
                         </p>
-                        <img src='images/HomePageImg.jpeg' alt="img" className='firstDiv-img' />
+                        <img src='images/EPAF_LOGO.png' width={"350px"} alt="img" className='firstDiv-img' />
                     </div>
                   </li>
                 <li className='home-li'>
@@ -28,10 +29,10 @@ function Home() {
                         <h3>Explanation of features</h3>
                         <ul>
                             <li>
-                                <HomePageBox imgUrl='https://ykcstruga9aclasses.000webhostapp.com/user.PNG' imgAlt='asd' title="title" paragraph='paragraph' button="button" />
+                                <HomePageBox imgUrl="https://images-ext-1.discordapp.net/external/LzIwFDsWK535BZmekN-KK9Em52BoH923-deIjJ0sDBw/http/www.brsmeas.org/Portals/2/images/news/Mountains_plastic.jpg" imgAlt='pollutionImage' title="Pollution Report Feature"  />                            
                             </li>
                             <li>
-                                <HomePageBox imgUrl='https://ykcstruga9aclasses.000webhostapp.com/user.PNG' imgAlt='asd' title="title" paragraph='paragraph' button="button" />
+                                <HomePageBox imgUrl='https://ykcstruga9aclasses.000webhostapp.com/user.PNG' imgAlt='asd' title="Water Purification Feature" />
                             </li>
                         </ul>
                     </div>
@@ -40,11 +41,9 @@ function Home() {
                     <div className='lastDiv'>
                         <div className='info'>
                             <br />
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-                            Sapiente voluptas aliquam dolor assumenda, odio recusandae ducimus asperiores, <br />
-                            perferendis alias unde tempore debitis commodi aut, <br />
-                            necessitatibus praesentium pariatur minus dolorum doloremque. <br /> <br />
-                            <Link className='read-more' to="/" >Read More</Link>
+                            Scroll down and read our informative articles
+                            <br />
+                            {/* <Link className='read-more' to="/about" >Read More</Link> */}
                         </div>
                         <div style={fullWidth}>
                             <HomeSlider />

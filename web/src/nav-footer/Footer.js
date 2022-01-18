@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
       return (
-          <div className='footer'>
+          <footer className='footer'>
               <ul className='footer-division'>
                   <li className='footer-division-li'>
                         <h3>EPAF</h3>
@@ -17,16 +17,16 @@ function Footer() {
                               <Link className="footer-links" to="/" >About</Link>
                             </li>
                             <li>
-                                <Link className="footer-links" to="/" >Events</Link>
+                                <Link className="footer-links" to="/" >CleanUps</Link>
                             </li>
                             <li>
-                                <Link className="footer-links" to="/" >Report Pollution/Fire</Link>
+                                <Link className="footer-links" to="/" >Report Pollution</Link>
                             </li>
                             <li>
                                 <Link className="footer-links" to="/" >Water Purification</Link>
                             </li>
                             <li>
-                                <Link className="footer-links" to="/" >Forum</Link>
+                                <Link className="footer-links" to="/" >Trip Suggestions</Link>
                             </li>
                         </ul>
                   </li>
@@ -59,7 +59,7 @@ function Footer() {
                         </ul>
                   </li>
               </ul>
-          </div>
+          </footer>
       )
   }
 

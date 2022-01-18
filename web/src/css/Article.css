@@ -1,0 +1,42 @@
+.article{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.article .image{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.article .image img{
+    height: 80%;
+    /* width: 70%; */
+}
+.article .author{
+    width: 100%;
+    min-height: 30px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.article .author > h3{
+    width: 65%;
+}
+.article .paragraph{
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    margin: 30px 0 10px 0;
+}
+.article .paragraph > div{
+    width: 65%;
+    font-size: 1.0625rem;
+}

@@ -29,7 +29,7 @@ function TripSuggestions() {
    };
    
    async function PosttoApi() {
-     const response = await fetch('http://localhost:3001/Tripsuggestion', opstions);
+     const response = await fetch('https://EPAFbackend.agoenes.repl.co/Tripsuggestion', opstions);
      const resData = await response.json();
    
      console.log(JSON.stringify(jsondata))

@@ -18,10 +18,10 @@ app.use(cors({
 
   let title = "";
 
-  // async function deletemany() {
-  //   await Event.deleteMany({})
-  // }
-  // deletemany()
+   async function deletemany() {
+     await Event.deleteMany({})
+  }
+   //deletemany()
 
 app.post("/post", async (req, res) => {
   let isHappend = true;
@@ -34,6 +34,8 @@ app.post("/post", async (req, res) => {
   const event = await Event.create({
     idNo: allEvents || 0,
     class: "a",
+    dateTime:  req.body.dateTime,
+    place: req.body.place,
     lat: parseFloat(req.body.lat),
     lon: parseFloat(req.body.lon),
     description: req.body.description,

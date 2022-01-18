@@ -1,0 +1,39 @@
+.about{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.aboutQuestion{
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 0;
+}
+.aboutQuestion:nth-child(2n){
+    background-color: rgb(247, 247, 247);
+}
+
+.aboutQuestion .aboutDiv{
+    width:1000px;
+    /* min-width: 50px !important; */
+    word-wrap: break-word;
+
+}
+.aboutQuestion .aboutDiv h4{
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    .aboutQuestion .aboutDiv{
+        width:500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .aboutQuestion .aboutDiv{
+        width:300px;
+    }
+}

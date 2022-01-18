@@ -1,6 +1,6 @@
 .home{
     grid-area: main;
-    min-height: 1100px;
+    min-height: 920px;
 }
 .home .home-ul{
     width: 100%;
@@ -40,7 +40,7 @@
     justify-content: space-evenly;
 }
 .home .last-li{
-    min-height: 500px;
+    min-height: 320px;
 }
 .home .home-li .lastDiv{
     width: 100%;
@@ -54,7 +54,7 @@
 }
 .home .home-li .info{
     max-width: 800px;
-    min-height: 150px;
+    min-height: 50px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -67,14 +67,18 @@
 
 @media screen and (max-width: 1000px){
     .home{
-        min-height: 1320px;
+        min-height: 1260px;
     }
     .home .home-li .firstDiv{
         flex-direction: column;
         height: 400px;
     }
     .home .home-li .midDiv{
-        height: 420px;
+        height: 450px;
+        margin: 30px 0;
+    }
+    .home .home-li .midDiv > h3{
+        margin-top: 30px;
     }
     .home .home-li .midDiv ul{
         flex-direction: column;
@@ -87,6 +91,9 @@
         text-align: center;
     }
     .home .home-li .info{
-        max-width: 500px;
+        max-width: 300px;
+    }
+    .home .last-li{
+        border-bottom: 20px solid #F4F9F5;
     }
 }

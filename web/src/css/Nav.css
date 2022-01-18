@@ -3,44 +3,44 @@
   border-bottom: .5px solid rgba(226, 226, 226, .5)
 }
     /*this*/
-.header ul{
+.header nav{
   display: flex;
   justify-content: space-around;
 }
 
-.header ul .firstLi{
+.header nav .firstLi{
   display: flex;
 }
-.header ul .firstLi h3{
+.header nav .firstLi h3{
   font-size: 30px;
   font-weight: 900;
   line-height: 60px;
 }
 
-.header ul .firstLi .logo{
+.header nav .firstLi .logo{
   height: 60px;
 }
 
 /*seccond-li // navbar*/
-.header ul .secLi ul{
+.header nav .secLi ul{
   min-height: 60px;
-  max-width: 600px;
-  width: 700px;
+  max-width: 750px;
+  width: 750px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
 }
-.header ul .secLi ul li .links{
+.header nav .secLi ul li .links{
   color:rgba(0, 0, 0, .5);
   font-weight: 600;
   font-size: 15px;
   transition: 300ms;
 }
-.header ul .secLi ul li .links:hover{
+.header nav .secLi ul li .links:hover{
   color: var(--orange-default-color);
 }
-.header ul .secLi ul li .links .forum{
+.header nav .secLi ul li .links .forum{
   background-color: var(--orange-default-color);
   color: #fff;
   width: 130px;
@@ -52,10 +52,10 @@
   text-align: center;
   transition: 350ms;
 }
-.header ul .secLi ul li .links .forum:hover{
+.header nav .secLi ul li .links .forum:hover{
   background-color: var(--orange-hover-color);
 }
-.header ul .secLi ul li .links .forum h4{
+.header nav .secLi ul li .links .forum h4{
   font-weight: 400;
   font-size: 15px;
   text-align: center;
@@ -89,23 +89,23 @@
 
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1200px){
   /*header*/
   .navbar{
       margin: 0;
       padding: 0;
   }
 
-  .header ul .firstLi h3{
+  .header nav .firstLi h3{
       margin-left: 15px;
   }
-  .header ul .firstLi{
+  .header nav .firstLi{
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
   }
-  .header ul .secLi{
+  .header nav .secLi{
       background-color: #fff; 
       width: 100%;
       height: 300px;
@@ -125,7 +125,7 @@
       pointer-events: none;
       z-index: -10;
   }
-  .header ul .secLi ul{
+  .header nav .secLi ul{
       margin: 0;
       padding: 0;
       height: 300px;
