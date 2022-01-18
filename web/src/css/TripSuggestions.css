@@ -36,7 +36,27 @@
 .activeforlike{
     display: block !important;
 }
-
+.linkForNewTripSuggestion{
+    background-color: var(--orange-default-color);
+    color: #fff;
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 350ms;
+  }
+  .linkForNewTripSuggestion:hover{
+    background-color: var(--orange-hover-color);
+  }
+  .linkForNewTripSuggestion h4{
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+  }
+  
 .tripbutton{
     appearance: none;
     -webkit-appearance: none;

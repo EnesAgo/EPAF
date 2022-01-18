@@ -47,9 +47,6 @@ function Nav() {
                             <Link className="links" to="/" >Water Purification</Link>
                         </li>
                         <li>
-                            <Link className='links' to="submitToTripSuggestions" >new Trip suggestion</Link>
-                        </li>
-                        <li>
                             <Link className="links" to="/TripSuggestion">
                                 <div className="forum">
                                     <h4>Trip Suggestion</h4>

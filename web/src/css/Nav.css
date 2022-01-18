@@ -24,8 +24,8 @@
 /*seccond-li // navbar*/
 .header nav .secLi ul{
   min-height: 60px;
-  max-width: 750px;
-  width: 750px;
+  max-width: 600px;
+  width: 700px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -89,7 +89,7 @@
 
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1000px){
   /*header*/
   .navbar{
       margin: 0;
