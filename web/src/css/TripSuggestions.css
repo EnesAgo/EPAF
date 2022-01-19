@@ -4,7 +4,19 @@
     flex-direction: column;
     align-items: center;
 }
-
+.tripsuggestions .tripTitle{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+}
+.tripsuggestions .tripTitle > p{
+    max-width: 400px;
+    font-size: 16px;
+}
 .likeIcon{
     width: 25px;
     height: 40px !important;
@@ -39,8 +51,8 @@
 .linkForNewTripSuggestion{
     background-color: var(--orange-default-color);
     color: #fff;
-    width: 130px;
-    height: 35px;
+    width: 150px;
+    height: 45px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -53,7 +65,7 @@
   }
   .linkForNewTripSuggestion h4{
     font-weight: 400;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
   }
   
@@ -78,4 +90,16 @@
 .tripbutton:hover{
     background-color: #e7e7e7;
     border: 2px solid #6d6d6d;
+}
+
+@media screen and (max-width: 1000px) {
+    .tripsuggestions .tripTitle{
+        /* display: none; */
+        width: 300px !important;
+        margin: 0;
+    }
+    .tripsuggestions .tripTitle > p{
+        width: 300px;
+        /* display: none; */
+    }
 }

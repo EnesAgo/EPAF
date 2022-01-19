@@ -29,7 +29,17 @@ function EventMap() {
             lng: fetchData ? fetchData[objIndex].lon : 0
         }
       )
+      async function getData() {
+        const response = await fetch('https://EPAFbackend.agoenes.repl.co/post');
+        const resData = await response.json();
 
+        setFetchData(resData)
+        console.log(resData)
+    }
+
+    useEffect(()=>{
+        getData();
+        }, []);
       useEffect(() => {
         if(fetchData){
         setCenter({
@@ -116,6 +126,27 @@ function EventMap() {
                 <></>
                 </GoogleMap>
                 ) : <></>}
+
+                <div className="image">
+                  {fetchData ? 
+                  <img src={`data:image/jpeg;base64,${fetchData[objIndex].encodedImg}`} alt="some photos" /> :
+                  <h1>Loading...</h1> }
+                  
+                </div>
+
+
+                {fetchData ?
+                                <div className="informations">
+                                <h3>Location: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].place}</span></h3> <br />
+                                <h3>Date &#38; Time: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].dateTime}</span></h3> <br />
+                                <h3>Description: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].description}</span></h3>
+                                <br />
+                              </div> :
+                <h1>Loading...</h1>
+                }
+
+
+
           </div>
       )
   }
