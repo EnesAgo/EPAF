@@ -30,7 +30,7 @@ const tripsuggestionSchema = new mongoose.Schema({
   sendFrom: String,
   likes: Number,
   place: String,
-  generalInfo: String
+  // generalInfo: String
 })
 
 module.exports = {

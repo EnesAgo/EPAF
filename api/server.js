@@ -21,7 +21,7 @@ app.use(cors({
    async function deletemany() {
      await Event.deleteMany({})
   }
-   //deletemany()
+  //  deletemany()
 
 app.post("/post", async (req, res) => {
   let isHappend = true;
@@ -83,7 +83,7 @@ app.post("/Tripsuggestion", async (req, res) => {
     sendFrom: req.body.sendFrom,
     likes: 0,
     place: req.body.place,
-    generalInfo: req.body.generalInfo
+    // generalInfo: req.body.generalInfo
   })
 
   await tripsuggestion.save()
