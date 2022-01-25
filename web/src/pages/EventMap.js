@@ -19,6 +19,8 @@ function EventMap() {
     const [fetchData, setFetchData] = useState(val)
 
     const [objIndex, setObjIndex] = useState(val ? val.findIndex(obj => obj._id == id) : 0);
+    
+    const [idForPost, setIdForPost] = useState(val ? val[val.findIndex(obj => obj._id == id)]._id : "abc")
 
 
     const [center, setCenter] = useState(
@@ -33,8 +35,37 @@ function EventMap() {
         const response = await fetch('https://EPAFbackend.agoenes.repl.co/post');
         const resData = await response.json();
 
+        setIdForPost(resData[resData.findIndex(obj => obj._id == id)]._id)
         setFetchData(resData)
         console.log(resData)
+    }
+ 
+    const opstions = {
+     method: 'POST',
+     headers: {
+         'Content-Type': 'application/json',
+         'Accept': 'application/json'
+     },
+     body: JSON.stringify({id: idForPost})
+ };
+ 
+    async function postToCounter() {
+      if(localStorage.getItem("epafIsInterested") == 'false' || localStorage.getItem("epafIsInterested") == undefined || localStorage.getItem("epafIsInterested") == null || !localStorage.getItem("epafIsInterested")){
+        const response = await fetch('https://EPAFbackend.agoenes.repl.co/interestedPeople', opstions);
+        const resData = await response.json();
+        console.log(resData)
+
+
+        localStorage.epafIsInterested = true
+      getData();
+      alert("✔️")
+
+      }
+      else{
+      getData();
+
+      }
+    
     }
 
     useEffect(()=>{
@@ -59,6 +90,7 @@ function EventMap() {
           lat: val[val.findIndex(obj => obj._id == id)].lat,
           lng: val[val.findIndex(obj => obj._id == id)].lon
         })
+        setIdForPost(val[val.findIndex(obj => obj._id == id)]._id)
       }
 
       }, [fetchData, val])
@@ -132,19 +164,31 @@ function EventMap() {
                   <img src={`data:image/jpeg;base64,${fetchData[objIndex].encodedImg}`} alt="some photos" /> :
                   <h1>Loading...</h1> }
                   
-                </div>
 
-
-                {fetchData ?
+                  {(width>=1000 && fetchData)&&
                                 <div className="informations">
+                                <h3>Interested people:<span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].interestedPeople}</span></h3> <br />
                                 <h3>Location: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].place}</span></h3> <br />
                                 <h3>Date &#38; Time: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].dateTime}</span></h3> <br />
                                 <h3>Description: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].description}</span></h3>
                                 <br />
-                              </div> :
-                <h1>Loading...</h1>
+                                <button onClick={postToCounter} className='eventMapButton'>Be Interested</button>
+                              </div>
+                // <h1>Loading...</h1>
                 }
+                </div>
 
+
+                {(width<1000 && fetchData) &&
+                  <div className="informations">
+                  <h3>Interested people:<span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].interestedPeople}</span></h3> <br />
+                  <h3>Location: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].place}</span></h3> <br />
+                  <h3>Date &#38; Time: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].dateTime}</span></h3> <br />
+                  <h3>Description: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].description}</span></h3>
+                  <br />
+                  <button onClick={postToCounter} className='eventMapButton'>Be Interested</button>
+                </div> 
+                }
 
 
           </div>

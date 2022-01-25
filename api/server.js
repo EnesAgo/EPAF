@@ -23,6 +23,74 @@ app.use(cors({
   }
   //  deletemany()
 
+  async function deleteee(){
+    await Event.deleteMany({})
+  }
+  // deleteee();
+
+//likes
+
+app.post("/like", async (req, res) => {
+  const like = await Tripsuggestion.find({_id:String(req.body.id)});
+
+  // let counter = interestedId;
+
+  // await Event.updateOne({_id:String(req.body.id)}, {
+  //   interestedPeople = interestedId.interestedPeople
+  // })
+await Tripsuggestion.findByIdAndUpdate({_id:String(req.body.id)}, {likes: like[0]["likes"]+1})
+
+console.log(like[0]["likes"])
+  
+console.log(req.body.id + "this is")
+
+  res.send(true)
+
+})
+
+app.post("/unlike", async (req, res) => {
+  const like = await Tripsuggestion.find({_id:String(req.body.id)});
+
+  // let counter = interestedId;
+
+  // await Event.updateOne({_id:String(req.body.id)}, {
+  //   interestedPeople = interestedId.interestedPeople
+  // })
+
+  if(like[0]["likes"] == 0 ){
+    res.send("there are 0 likes")
+  }
+  else{
+await Tripsuggestion.findByIdAndUpdate({_id:String(req.body.id)}, {likes: like[0]["likes"]-1})
+
+console.log(like[0]["likes"])
+  
+console.log(req.body.id + "this is")
+
+  res.send("true")
+}
+
+})
+
+
+app.post("/interestedPeople", async (req, res) => {
+  const interestedId = await Event.find({_id:String(req.body.id)});
+
+  // let counter = interestedId;
+
+  // await Event.updateOne({_id:String(req.body.id)}, {
+  //   interestedPeople = interestedId.interestedPeople
+  // })
+await Event.findByIdAndUpdate({_id:String(req.body.id)}, {interestedPeople: interestedId[0]["interestedPeople"]+1})
+
+console.log(interestedId[0]["interestedPeople"])
+  
+console.log(req.body.id + "this is")
+
+  res.json(interestedId)
+
+})
+
 app.post("/post", async (req, res) => {
   let isHappend = true;
 
@@ -39,7 +107,8 @@ app.post("/post", async (req, res) => {
     lat: parseFloat(req.body.lat),
     lon: parseFloat(req.body.lon),
     description: req.body.description,
-    encodedImg: req.body.encodedFile
+    encodedImg: req.body.encodedFile,
+    interestedPeople: 0
   })
 
   await event.save()

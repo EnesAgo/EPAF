@@ -3,7 +3,7 @@ import './../css/Events.css'
 import {Link} from 'react-router-dom'
 import useWindowSizeOnce from './../hooks/useWindowSizeOnce'
 
-function Event({time, place, des, img, id}) {
+function Event({time, place, des, img, id, counter}) {
     const [butTxt, setButTxt] = useState('click to open map');
     const {width} = useWindowSizeOnce();
 
@@ -24,7 +24,7 @@ function Event({time, place, des, img, id}) {
                   <h2>Description: </h2><span>{des}</span>
               </div>
               <div className="counter">
-                  counter
+                  <h2>Interested People: {counter}</h2>
               </div>
           </div>
           </Link>

@@ -42,7 +42,7 @@ function TripSuggestions() {
 
                 {fetchData ? 
                 fetchData.map(e => 
-                    <TripSuggestion lat={e.lat} lon={e.lon} likes={e.likes} title={e.title} placeName={e.place} des={e.description} sendFrom={e.sendFrom} img={e.encodedImg}  /> )
+                    <TripSuggestion key={e._id} id={e._id} lat={e.lat} lon={e.lon} likes={e.likes} title={e.title} placeName={e.place} des={e.description} sendFrom={e.sendFrom} img={e.encodedImg}  /> )
                 :
                 <h1>Loading...</h1>}
 

@@ -1,22 +1,63 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function TripSuggestion({title, sendFrom, des, img, lon, lat, placeName, likes}) {
+function TripSuggestion({title, sendFrom, des, img, lon, lat, placeName, likes, id}) {
 
-    const [isActiveFirst, setIsActiveFirst] = useState("activeforlike")
+    const [isActiveFirst, setIsActiveFirst] = useState("")
     const [isActiveSec, setIsActiveSec] = useState("")
     const [changingLikes, setChangingLikes] = useState(likes)
+    const [localStorageData, setLocalStorageData] = useState(localStorage.getItem("epafIsLiked"))
+
+    useEffect(() => {
+      setLocalStorageData(localStorage.getItem("epafIsLiked"))
+      console.log(localStorageData)
+
+      if(localStorageData === true || localStorageData === 'true'){
+        setIsActiveFirst("");
+        setIsActiveSec("activeforlike");
+      console.log(localStorageData)
+
+      }
+      else{
+        setIsActiveFirst("activeforlike");
+        setIsActiveSec("");
+      console.log(localStorageData)
+
+      }
+    }, [])
+
+  
+  async function postToCounter(path) {
+         const response = await fetch(`https://EPAFbackend.agoenes.repl.co/${path}`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: JSON.stringify({id: id})
+         });
+         const resData = await response.json();
+         console.log(resData)
+ 
+ 
+        //  localStorage.epafIsLiked = true
+        //  alert("✔️")      
+     
+     }
 
     function changeActi() {
         if(isActiveFirst == "activeforlike"){
             setIsActiveFirst("");
             setIsActiveSec("activeforlike");
             setChangingLikes(changingLikes+1)
+            postToCounter("like")
+            localStorage.epafIsLiked = true
         }
         else{
             setIsActiveFirst("activeforlike");
             setIsActiveSec("")
             setChangingLikes(changingLikes-1)
-
+            postToCounter("unlike")
+            localStorage.epafIsLiked = false
         }
     }
 

@@ -31,7 +31,7 @@ function Events() {
           <div className='events'>
 
                 {fetchData ? 
-                    fetchData.map(e => <Event key={e._id} place={e.place} time={e.dateTime} img={e.encodedImg} des={e.description} lat={e.lat} lon={e.lon} id={e._id} />)
+                    fetchData.map(e => <Event counter={e.interestedPeople} key={e._id} place={e.place} time={e.dateTime} img={e.encodedImg} des={e.description} lat={e.lat} lon={e.lon} id={e._id} />)
                     : <h1>loading...</h1>}
           </div>
       )

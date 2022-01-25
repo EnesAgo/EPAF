@@ -16,7 +16,8 @@ const eventSchema = new mongoose.Schema({
   lat: Number,
   lon: Number,
   description: String,
-  encodedImg: String
+  encodedImg: String,
+  interestedPeople: Number
 })
 
 const tripsuggestionSchema = new mongoose.Schema({
