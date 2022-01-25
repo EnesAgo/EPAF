@@ -5,7 +5,7 @@ function TripSuggestion({title, sendFrom, des, img, lon, lat, placeName, likes, 
     const [isActiveFirst, setIsActiveFirst] = useState("")
     const [isActiveSec, setIsActiveSec] = useState("")
     const [changingLikes, setChangingLikes] = useState(likes)
-    const [localStorageData, setLocalStorageData] = useState(localStorage.getItem("epafIsLiked"))
+    const [localStorageData, setLocalStorageData] = useState(localStorage.getItem(`epafIsLiked${id}`))
 
     useEffect(() => {
       setLocalStorageData(localStorage.getItem("epafIsLiked"))
@@ -50,14 +50,14 @@ function TripSuggestion({title, sendFrom, des, img, lon, lat, placeName, likes, 
             setIsActiveSec("activeforlike");
             setChangingLikes(changingLikes+1)
             postToCounter("like")
-            localStorage.epafIsLiked = true
+            localStorage.setItem(`epafIsLiked${id}`, true)
         }
         else{
             setIsActiveFirst("activeforlike");
             setIsActiveSec("")
             setChangingLikes(changingLikes-1)
             postToCounter("unlike")
-            localStorage.epafIsLiked = false
+            localStorage.setItem(`epafIsLiked${id}`, false)
         }
     }
 

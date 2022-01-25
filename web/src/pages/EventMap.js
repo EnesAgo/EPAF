@@ -50,7 +50,7 @@ function EventMap() {
  };
  
     async function postToCounter() {
-      if(localStorage.getItem("epafIsInterested") == 'false' || localStorage.getItem("epafIsInterested") == undefined || localStorage.getItem("epafIsInterested") == null || !localStorage.getItem("epafIsInterested")){
+      if(localStorage.getItem(`epafIsInterested${fetchData[objIndex]._id}`) == 'false' || localStorage.getItem(`epafIsInterested${fetchData[objIndex]._id}`) == undefined || localStorage.getItem(`epafIsInterested${fetchData[objIndex]._id}`) == null || !localStorage.getItem(`epafIsInterested${fetchData[objIndex]._id}`)){
         const response = await fetch('https://EPAFbackend.agoenes.repl.co/interestedPeople', opstions);
         const resData = await response.json();
         console.log(resData)
@@ -58,7 +58,7 @@ function EventMap() {
 
         localStorage.epafIsInterested = true
       getData();
-      alert("✔️")
+      // alert("✔️")
 
       }
       else{
