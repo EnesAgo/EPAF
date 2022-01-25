@@ -156,7 +156,8 @@ app.post("/Tripsuggestion", async (req, res) => {
   })
 
   await tripsuggestion.save()
-
+ 
+  
   console.log("hi")
 
   res.json(true)
