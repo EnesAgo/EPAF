@@ -53,17 +53,20 @@
     background-size: cover;
     width: 100%;
     min-height: 400px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 /*container*/
-.container{
+.headerImg .container{
     /* background-color: #fff; */
     color: #fff;
 
-    position: absolute;
+    /* position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 
     display: flex;
     flex-direction: column;
@@ -188,4 +191,16 @@
     width: 200px !important;
 }
 
+}
+@media screen and (max-width: 650px) {
+    .headerImg .container{
+        width: 400px;
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 401px) {
+    .headerImg .container{
+        width: 100%;
+    }
 }

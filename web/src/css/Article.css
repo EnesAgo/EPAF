@@ -40,3 +40,28 @@
     width: 65%;
     font-size: 1.0625rem;
 }
+
+@media screen and (max-width: 1000px) {
+    .article .image{
+        margin: 0;
+        width: 100%;
+        display: none;
+    }
+    .article .image img{
+        width: 100%;
+    }
+    .article .author > h3{
+        /* display: none; */
+        width: 100%;
+        text-align: center;
+
+    }
+    .article .paragraph{
+        width: 100%;
+    }
+    .article .paragraph > div{
+        width: 100%;
+        margin: 0 10px;
+        /* display: none; */
+    }
+}
