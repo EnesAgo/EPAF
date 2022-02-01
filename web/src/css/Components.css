@@ -195,7 +195,7 @@
 @media screen and (max-width: 650px) {
     .headerImg .container{
         width: 400px;
-        display: none;
+        /* display: none; */
     }
     
 }
