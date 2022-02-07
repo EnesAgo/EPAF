@@ -22,9 +22,9 @@ function Footer() {
                             <li>
                                 <Link className="footer-links" to="/report" >Report Pollution</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link className="footer-links" to="/" >Water Purification</Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link className="footer-links" to="/submitToTripSuggestions" >Post a Suggestion</Link>
                             </li>
