@@ -9,6 +9,9 @@
 .events *{
     color: #000;
 }
+.counter{
+    margin-right: 40px;
+}
 .event{
     box-shadow: 3px 3px 3px #e3e6e9, -2px 0 2px rgba(0, 0, 0, .1);
     height: 300px;
@@ -34,6 +37,7 @@
     justify-content: space-around;
     height: 50%;
     flex-wrap: wrap;
+    margin-right: 30px;
 }
 .event .des span{
     font-size: 14px;
@@ -79,6 +83,9 @@
     }
 }
 @media screen and (max-width: 710px) {
+    .counter{
+        margin-right: 0;
+    }
     .event{
         height: 200px;
         width: 500px;
