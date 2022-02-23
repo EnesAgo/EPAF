@@ -22,23 +22,35 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    height: 25px;
-    width: 100px;
+    height: 40px !important;
+    width: 150px !important;
     line-height: 13.3px;
-    font-size: 13.3px;
+    font-size: 17.3px;
     background-color: #eeeeee;
     border: 0.5px solid #8f8f8f;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     transition: 100ms;
     text-align: center;
     align-items: center;
     justify-content: center;
     padding:0;
+    margin-bottom: 30px;
+    /* margin-left: 10px; */
+}
+.mySpan{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .eventMapButton:hover{
     background-color: #e7e7e7;
     border: 2px solid #6d6d6d;
+}
+.informations{
+    margin-left: 20px;
+    margin-top: 20px;
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -46,4 +58,31 @@
         width: 100%;
         /* flex-direction: column; */
     }
+    .eventMap .image img{
+        height: auto;
+        width: 100%;
+        margin: 0 20px;
+        /* width: 70%; */
+    }
+    .eventMapButton{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 25px !important;
+        width: 100px !important;
+        line-height: 13.3px !important;
+        font-size: 13.3px !important;
+        background-color: #eeeeee;
+        border: 0.5px solid #8f8f8f;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 100ms;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding:0;
+        margin-bottom: 30px;
+        /* margin-left: 10px; */
+    }
+
 }

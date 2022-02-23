@@ -186,7 +186,10 @@ function EventMap() {
                   <h3>Date &#38; Time: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].dateTime}</span></h3> <br />
                   <h3>Description: <span style={{fontSize:"18px", fontWeight:"500"}}>{fetchData[objIndex].description}</span></h3>
                   <br />
-                  <button onClick={postToCounter} className='eventMapButton'>Be Interested</button>
+                  
+                  <span className='mySpan'>
+                    <button onClick={postToCounter} className='eventMapButton'>Be Interested</button>
+                  </span>
                 </div> 
                 }
 
