@@ -14,7 +14,7 @@ function Home() {
                   <li className='home-li'>
                     <div className="firstDiv">
                         <p className='firstDiv-txt'>
-                            EPAF stands for Environmental Protection and Awareness of Forests. <br /> 
+                            EPAF stands for Environmental Protector and Awareness of Forests. <br /> 
                             It is an environmentaly friendly application. The perpous of this <br />
                             application is to save the mountains and forests from pollution <br />
                             and provide people healthy environments.

@@ -9,7 +9,7 @@ function HeaderImg() {
             <h4>Welcome to EPAF</h4>
 
             <p>
-            The Environmental Protection and Awareness of Forests
+            The Environmental Protector and Awareness of Forests
             </p>
 
             {/* <div class="consultBut">
