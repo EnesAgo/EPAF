@@ -17,7 +17,9 @@ function Event({time, place, des, img, id, counter}) {
       return (
           <Link to={`/CleanUps/${id}`}>
           <div className='event d-flex'>
-              <img src={`data:image/jpeg;base64,${img}`} alt={des} />
+              <span className="eventSpan">
+                <img src={`data:image/jpeg;base64,${img}`} alt={des} />
+              </span>
               <div className="des d-flex">
                   <h2>Location: {place}</h2>
                   <h2>Date: {time}</h2>

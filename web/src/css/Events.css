@@ -67,6 +67,11 @@
 }
 
 @media screen and (max-width: 1010px) {
+    .event .eventSpan{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     .event img{
         height: auto;
         width: 80%;
