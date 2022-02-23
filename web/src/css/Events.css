@@ -26,6 +26,7 @@
 .event img{
     height: 200px;
     margin-left: 20px;
+    margin-right: 30px;
     border-radius: 20px;
 }
 .event .des{
@@ -62,6 +63,11 @@
 }
 
 @media screen and (max-width: 1010px) {
+    .event img{
+        height: auto;
+        width: 80%;
+        margin: 0 20px;
+    }
     .event{
         height: 200px;
         width: 700px;
