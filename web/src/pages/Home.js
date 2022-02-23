@@ -29,10 +29,10 @@ function Home() {
                         <h3>Explanation of features</h3>
                         <ul>
                             <li>
-                                <HomePageBox imgUrl="https://images-ext-1.discordapp.net/external/LzIwFDsWK535BZmekN-KK9Em52BoH923-deIjJ0sDBw/http/www.brsmeas.org/Portals/2/images/news/Mountains_plastic.jpg" imgAlt='pollutionImage' title="Pollution Report Feature"  />                            
+                                <HomePageBox url="/CleanUps" imgUrl="https://images-ext-1.discordapp.net/external/LzIwFDsWK535BZmekN-KK9Em52BoH923-deIjJ0sDBw/http/www.brsmeas.org/Portals/2/images/news/Mountains_plastic.jpg" imgAlt='pollutionImage' title="Pollution Report Feature"  />                            
                             </li>
                             <li>
-                                <HomePageBox imgUrl='https://cdn.discordapp.com/attachments/915935569660477440/940298546840735816/tripsuggestion.jpg' imgAlt='https://cdn.discordapp.com/attachments/915935569660477440/940298546840735816/tripsuggestion.jpg' title="Trip Suggestions" />
+                                <HomePageBox url="TripSuggestion" imgUrl='https://cdn.discordapp.com/attachments/915935569660477440/940298546840735816/tripsuggestion.jpg' imgAlt='https://cdn.discordapp.com/attachments/915935569660477440/940298546840735816/tripsuggestion.jpg' title="Trip Suggestions" />
                             </li>
                         </ul>
                     </div>
