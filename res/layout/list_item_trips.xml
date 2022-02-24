@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="7dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="7dp"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:id="@+id/imgEventTrip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtLat"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_toEndOf="@id/imgFact"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:text="Lat"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtLon"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/txtLat"-->
+        <!--            android:layout_toEndOf="@id/imgFact"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:text="Lon"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/txtTitleTrip"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgEventTrip"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:text="Pollution"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDescTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAddressTrip"
+            android:layout_toEndOf="@id/imgEventTrip"
+            android:text="Desc"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAddressTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/imgEventTrip"
+            android:layout_marginTop="12dp"
+            android:text="Address"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="User"
+            android:layout_marginStart="5dp"
+            android:id="@+id/txtSendFromTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txtTitleTrip"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/txtLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnLikes"
+            android:layout_alignBottom="@+id/btnLikes"
+            android:layout_alignParentEnd="true"
+            />
+
+        <Button
+            android:id="@+id/btnLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:layout_toEndOf="@id/imgEventTrip"
+            android:layout_above="@id/txtTitleTrip"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

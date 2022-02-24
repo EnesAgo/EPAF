@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EPAF Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">test</string>
+    <string name="tab_text_1">Forum</string>
+    <string name="tab_text_2">Event</string>
+    <string name="title_activity_forum_events">ForumEvents</string>
+    <string name="title_activity_forum_event">ForumEvent</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_event">Map</string>
+    <string name="title_activity_maps_trip">Map</string>
+
+
+</resources>

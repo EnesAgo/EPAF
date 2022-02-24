@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/polutfire"
+        android:title="Pollution Report"
+        android:icon="@drawable/ic_pollutonandfire"/>
+
+<!--    <item-->
+<!--        android:id="@+id/waterPurification"-->
+<!--        android:title="Water Purification"-->
+<!--        android:icon="@drawable/ic_waterpurification"/>-->
+    <item
+        android:id="@+id/event"
+        android:title="CleanUps"
+        android:icon="@drawable/ic_events"/>
+
+    <item
+        android:id="@+id/forum"
+        android:title="Trip Suggestion"
+        android:icon="@drawable/ic_forum"/>
+
+</menu>
