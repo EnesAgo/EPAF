@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 
-mongoose.connect("mongodb+srv://epaf:epaf@cluster0.lh5sp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", () => {
+mongoose.connect("yourUrl", () => {
   console.log("connected");
 },
 e => {
