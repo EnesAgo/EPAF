@@ -28,6 +28,7 @@
   "homepage": "https://github.com/EnesAgo/EPAF#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.17.2",
     "mongoose": "^6.1.3",
     "nodemon": "^2.0.15"
